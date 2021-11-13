@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <title>Jag's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slidein.css">
+    <script src="https://kit.fontawesome.com/d7186ae7fe.js" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+        crossorigin="anonymous">
+    </script>
+    <script src="js/slideIn.js"></script>
+    
+</head>
+<body>
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+    <script src="js/Countdown.js"></script>
+    <!-- HEADER -->
+
+    <header>
+
+        <h2 class="title"><a href="#">Welcome to <span class="jag">Jags</span> World</a></h2>
+        <nav class="headernav">
+            <a href="#abouts">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#educations">EDUCATION</a>
+            <a href="#skills">SKILLS</a>
+            <a href="resources/CV/Jagjit Singh CV 2020.pdf" target="_blank">CV</a>
+        </nav>
+        <div class="hidden" id="menu">
+            <img src="resources/images/burgermenu.png" alt="">
+        </div>
+    </header>
+
+    <!-- DROPDOWN MENU -->
+
+    <div class="dropdown" id="dropdown">
+        <div class=dropdown-links>
+            <a href="#abouts" id="cont-dropdown1">ABOUT ME</a>
+            <a href="#projects" id="cont-dropdown2">PROJECTS</a>
+            <a href="#educations" id="cont-dropdown3">EDUCATION</a>
+            <a href="#skills" id="cont-dropdown4">SKILLS</a>
+            <a href="#cv" id="cont-dropdown4">CV</a>
+        </div>
+    </div>
+
+    <!-- js for dropdown button -->
+    <script>
+        let menu = document.getElementById('menu');
+        let aboutMe = document.getElementById('cont-dropdown1');
+        let projects = document.getElementById('cont-dropdown2');
+        let education = document.getElementById('cont-dropdown3');
+        let skills = document.getElementById('cont-dropdown4');
+        let cv = document.getElementById('cont-dropdown5');
+
+        const myFunction = () => {
+            let dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display == 'none') {
+                dropdown.style.display = 'flex';
+            } else if (dropdown.style.display = 'flex') {
+                dropdown.style.display = 'none';
+            }
+        }
+        menu.addEventListener('click', myFunction);
+        aboutMe.addEventListener('click', myFunction);
+        projects.addEventListener('click', myFunction);
+        education.addEventListener('click', myFunction);
+        skills.addEventListener('click', myFunction);
+    </script>
+
+    <!-- INTRODUCTION -->
+
+    <div class="introduction" id="introduction">
+        <div class="intro-img">
+            <img src="resources/images/gif car lambo.gif" alt="">
+        </div>
+        <div class="intro">
+            <h2 id="greeting">Hello!</h2>   <!-- insert JS file for greetings. -->
+            <h1>I'm Jagjit Singh</h1>
+            <h1>Technology Support Analyst</h1>
+            <div class="contact-me">
+                <a href="#contact"><button>CONTACT ME</button></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- ABOUT -->
+
+    <!-- for navigation to about -->
+    <div id=abouts></div>
+
+    <section class="about js-slidein">
+        <div id="about">
+            <div class="image">
+                <img src="resources/images/Jag2.jpg" alt="">
+            </div>
+            <div class="about-info">
+                <h2>ABOUT ME</h2>
+                <p> Hi, My name is <strong>Jagjit Singh</strong> and I’m a Full-Stack Developer from Birmingham, United Kingdom! 
+                    I worked as a teacher across the globe for 5 years (US, UAE and the UK). Now, I’ve decided to pursue a new challenge, where I can bring together all the things that I love: solving problems, creating solutions, improving processes and continuous learning. I am educating myself through Codeacademy, and I would love to work with you to bring your ideas to life. 
+                    Most of my experience so far has been with using the following technologies:<strong> HTML, CSS, JavaScript and GitHub.</strong> Currently studying, <strong>React, Nodejs, SQL and jQuery. 
+                    </strong> I am also diving into the world of <strong>AWS</strong>. Currently working towards the Solutions Architect Associate certification.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects">
+        <h2 id="projects" class="title-content js-slidein">PROJECTS</h2>
+    
+        <div class="project-row">
+            <div class="project js-slidein" id="tarvel-blog">
+                <div class="image">
+                    <img src="resources/images/traveld.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>TRAVEL BLOG</h3>
+                    <p>Full-stack web development project</p>
+                    <div class="nav-projects">
+                        <a href="https://jagjitnila92.github.io/TravelBlog/"><button type="button">Website</button></a>
+                        <a href="https://github.com/JagjitNila92/TravelBlog"><button type="button">Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project js-slidein" id="style-guide">
+                <div class="image">
+                    <img src="resources/images/style-guide.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>STYLE GUIDE</h3>
+                    <p>Basic front-end web development</p>
+                    <div class="nav-projects">
+                        <a href="https://jagjitnila92.github.io/styleGuide/"><button type="button">Website</button></a>
+                        <a href="https://github.com/JagjitNila92/styleGuide"><button type="button">Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="project-row">
+            <div class="project js-slidein" id="tarvel-blog">
+                <div class="image">
+                    <img src="resources/images/Qgen.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Quote Generator</h3>
+                    <p>JavaScript Quote Generator Project</p>
+                    <div class="nav-projects">
+                        <a href="https://github.com/JagjitNila92/quoteGenerator"><button class="q-gen" type="button">Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project js-slidein" id="style-guide">
+                <div class="image">
+                    <img src="resources/images/reddit.JPG" alt=""> <!---Change Image to reddit client app.--->
+                </div>
+                <div class="details">
+                    <h3>Reddit Client app</h3>
+                    <p>React Reddit client app</p>
+                    <div class="nav-projects">
+                        <a href="https://github.com/JagjitNila92/reddit"><button type="button">Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section class="educations">
+        <h2 class="title-content js-slidein" id="educations">EDUCATION</h2>
+
+        <div class="education js-slidein" id="codecademy">
+            <div class="image">
+                <img src="resources/images/aws.png" alt="">
+            </div>
+            <div class="edu-info">
+                <h3>Optima IT</h3>
+                <span>2021</span>
+                <ul>
+                    <li>Cloud Practitioner</li>
+                    <li>Solutions Architect Associate and Professional</li>
+                    <li>AWS Security</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="education js-slidein" id="codecademy">
+            <div class="image">
+                <img src="resources/images/codecademy.png" alt="">
+            </div>
+            <div class="edu-info">
+                <h3>Codecademy</h3>
+                <span>2020</span>
+                <ul>
+                    <li>Full-Stack Software Engineer (12 months)</li>
+                    <li>jQuery (3 months)</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="education js-slidein" id="upc">
+            <div class="image">
+                <img src="resources/images/uw.png" alt="">
+            </div>
+            <div class="edu-info">
+                <h3>University of Worcester</h3>
+                <span>Worcester City, United Kingdom</span>
+                <span>2011 - 2014</span>
+                <p>BSc, Sport Coaching Science &amp; Development </p>
+                <p>Achieved a 2.1</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+        <h2 class="title-content js-slidein">CODING SKILLS</h2>
+        
+        <div class="skills-row js-slidein">
+
+            <div class="image" id="html">
+                <img src="resources/images/html.png" alt="">
+            </div>
+            <div class="image" id="css">
+                <img src="resources/images/css.png" alt="">
+            </div>
+            <div class="image" id="js">
+                <img src="resources/images/javascript.png" alt="">
+            </div>
+            <div class="image" id="nodejs">
+                <img src="resources/images/nodejs.png" alt="">
+            </div>
+            <div class="image" ic="python">
+                <img src="resources/images/python.png" alt="">
+            </div>
+            <div class="image" id="react">
+                <img src="resources/images/react.jpg" alt="">
+            </div>
+            <div class="image" id="git">
+                <img src="resources/images/git.png" alt="">
+            </div>
+            <div class="image" id="github">
+                <img src="resources/images/githubskills.png" alt="">
+            </div>
+            <div class="image" id="aws">
+                <img src="resources/images/aws.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <h2 class="contact-header show-on-scroll">Contact Me</h2>
+        <p>Before I <strong>retire</strong> in...</p>
+
+        <p id="days"></p>
+        <p id="timer"></p> 
+        <p>Drop me an email or follow me on social media if you want to reach out!</p>
+        
+        <div class="contact-social">
+            <a href="mailto:jagjitnila@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/JagjitNila92" target="blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jagjit-singh-nila-8ab1285b/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+
+        </div>
+
+        <button class="up-btn"><a href="#"><i class="fas fa-chevron-circle-up"></i></a></button>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>Copyright © 2020 Jagjit Singh. | All rights reserved.</p>
+    </footer>
+</body>
+</html>
